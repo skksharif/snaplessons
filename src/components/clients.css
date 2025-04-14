@@ -1,0 +1,28 @@
+.clients-container{
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+.clients-container h1{
+    font-size: 46px;
+    text-align: center;
+    color: blue;
+}
+.clients-slider{
+    margin: 50px 0;
+}
+.partners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.clients-slider img{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    object-fit: contain;
+    border-radius: 100%;
+    transition: transform 0.3s ease-in-out;
+}

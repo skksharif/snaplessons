@@ -1,0 +1,9 @@
+.services-container{
+    background-color: white;
+    padding: 50px 0;
+}
+.services-container h1{
+    font-size: 46px;
+    text-align: center;
+    color: blue;
+}

@@ -1,0 +1,88 @@
+.scard {
+  margin: 60px 0;
+}
+
+.scard img {
+  width: 180px;
+  height: 180px;
+}
+
+.scard h2 {
+  text-align: start;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.scard p {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fcard {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.rcard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .scard p {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .scard p {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scard p {
+    max-width: 90%;
+  }
+
+  .fcard,
+  .rcard {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .scard p {
+    max-width: 90%;
+    padding: 0 10px;
+  }
+
+  .fcard,
+  .rcard {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.about-card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 50px;
+}
+.about-card img{
+  width: 150px;
+}
+.about-card:hover{
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}

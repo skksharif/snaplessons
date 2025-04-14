@@ -1,0 +1,25 @@
+.bg-color1{
+    background-color: skyblue;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    filter: blur(50px);
+    position: absolute;
+    top:20%;
+    left: -10%;
+}
+.bg-color2{
+    background-color: skyblue;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    filter: blur(50px);
+    position: absolute;
+    top:20%;
+    right: -10%;
+}
+@media (max-width:480px) {
+  .bg-color1,.bg-color2{
+    display: none;
+  }   
+}

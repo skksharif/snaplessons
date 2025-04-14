@@ -1,38 +1,334 @@
-.App {
-  text-align: center;
+/* General styles */
+.home-container {
+  background-size: cover;
+}
+header .navbar1{
+  display: none;
+}
+header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header .logo img {
+  width: 80px;
+  object-fit: cover;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+  z-index: 999;
+  margin: 5px auto;
+}
+.social-media{
+  display: flex;
+  flex-direction: row;
+}
+.social-media a{
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  margin: 3px 10px;
+  border-radius: 30px;
+  padding: 5px;
+}
+.social-media a:hover{
+  background-color: rgb(139, 221, 254);
+}
+.social-media a img{
+  width: 25px;
+  height: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header .contact-icon img {
+  width: 35px;
+  padding: 15px 16px;
+  margin: 0 10px;
+}
+
+header .location a,
+header .phone a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  header .logo-text{
+    display: none;
+  }
+  header {
+    padding:10px 15px;
+    z-index: 999;
+    top: 0px;
+    position: sticky;
+    backdrop-filter: blur(15px);
+  }
+  header .navbar1{
+    display: block;  
+    margin-left: 150px;
+  }
+  .yt,
+  header .location,
+  header .phone {
+    display: none;
+  }
+
+  header .logo img {
+    width: 50px;
+    object-fit: cover;
+  }
+
+  header p {
+    font-size: 14px;
   }
 }
+@keyframes slide-left {
+   
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background: rgba(0, 0, 198, 0.744);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: rgb(25, 25, 25);
+  z-index: 999;
+  width: 80%;
+  top: 0px;
+  position: sticky;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  margin: 0 25px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: rgb(61, 61, 61);
+  transition: background-color 0.2s linear;
+}
+
+nav a:hover {
+  background-color: rgb(255, 214, 65);
+  color: blue;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover {
+  display: block;
+}
+
+.responsive {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  padding: 3px 7px;
+  box-shadow: 0 0 5px 0 grey;
+  backdrop-filter: blur(3px);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.menu-icon .bar {
+  width:25px;
+  height: 3px;
+  background-color: rgb(0, 42, 255);
+  margin: 4px 0;
+  transition: 0.4s;
+  z-index: 10;
+}
+.menu-icon .bar1 {
+  width: 35px;
+  height: 3px;
+  background-color: rgb(210, 186, 0);
+  margin: 4px 0;
+  transition: 0.4s;
+  z-index: 10;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  z-index: 10;
+}
+
+.menu-icon.close div:nth-child(1) {
+  transform: rotate(-45deg) translate(-14px, 2px);
+}
+
+.menu-icon.close div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.close div:nth-child(3) {
+  transform: rotate(45deg) translate(-14px, -2px);
+}
+
+.show-navitems {
+  margin: 0 30px;
+  text-decoration: none;
   color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  animation: mymove 1s;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 800px) {
+
+  .menu-icon {
+    cursor: pointer;
+    padding: 2px 6px;
+    box-shadow: none;
+    backdrop-filter: blur(3px);
+  }
+  .menu-icon div {
+    width: 27px;
+    height: 2.5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+    z-index: 10;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar{
+    display: none;
+  }
+
+  .responsive .nav-logo img {
+    width: 80px;
+    border-radius: 100%;
+    margin-left: 20px;
+  }
+
+  .responsive .menu-icon {
+    margin-right: 20px;
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    background-color: #001865;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    animation: slide-left 1s;
+  }
+  .show-navitems {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    border-radius: 5px;
+    padding: 20px 20px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*Slide Show */
+.slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  
+  background-color: white;
+}
+.slideshow-images{
+  padding: 10px;
+}
+
+.slideshow-images img {
+  width: 60%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  object-fit: cover;
+  margin-bottom: 60px;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.whatsapp-button img {
+  width: 45px;
+  height: 45px;
+}
+@media(max-width:789px){
+  .whatsapp-button img {
+    width: 40px;
+    height: 40px;
   }
-  to {
-    transform: rotate(360deg);
+  .slideshow {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+    background-color: white;
   }
+  .slideshow-images{
+    background-color: white;
+  }
+  
+  .slideshow-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    margin-bottom: 60px;
+  }
+  
 }
